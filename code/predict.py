@@ -25,7 +25,7 @@ def load_model():
     K = len(N_k)
     wordprobs = (N_wk + 1) / N_k
 
-    vocab = [L.split("\t")[-1].strip() for L in open(vocabfile)]
+    vocab = [L.split("\t")[-1].strip().decode() for L in open(vocabfile)]
     w2num = {w:i for i,w in enumerate(vocab)}
     assert len(vocab) == N_wk.shape[0]
 
