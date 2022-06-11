@@ -1,12 +1,21 @@
 from __future__ import division
 import numpy as np
 import os
+
 #
 import sys
 
 if sys.version_info[0] >= 3:
     unicode = str
+
+try:
+    # Python 2
+    xrange
+except NameError:
+    # Python 3, xrange is now named range
+    xrange = range   
 #
+
 vocabfile = "../model/model_vocab.txt"
 modelfile = "../model/model_count_table.txt"
 
