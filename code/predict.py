@@ -8,12 +8,14 @@ import sys
 if sys.version_info[0] >= 3:
     unicode = str
 
-try:
+from past.builtins import xrange
+
+#try:
     # Python 2
-    xrange
-except NameError:
+#    xrange
+#except NameError:
     # Python 3, xrange is now named range
-    xrange = range   
+#    xrange = range   
 #
 
 vocabfile = "../model/model_vocab.txt"
