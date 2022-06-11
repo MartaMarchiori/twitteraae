@@ -1,7 +1,12 @@
 from __future__ import division
 import numpy as np
-import sys,os
+import os
+#
+import sys
 
+if sys.version_info[0] >= 3:
+    unicode = str
+#
 vocabfile = "../model/model_vocab.txt"
 modelfile = "../model/model_count_table.txt"
 
